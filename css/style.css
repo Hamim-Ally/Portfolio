@@ -2410,6 +2410,7 @@ portfolio
   margin: 15px;
   width: calc(100vw - 30px);
   height: calc(100vh - 30px);
+  overflow: hidden;
 }
 .fancybox-container .fancybox-bg {
   background: rgba(32, 32, 42, 0.98);
