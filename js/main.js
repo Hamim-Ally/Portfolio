@@ -240,7 +240,7 @@ $(function() {
     }
   });
 
-  bar.animate(.85);
+  bar.animate(.20);
 
   var bar = new ProgressBar.Line(lineprog6, {
     strokeWidth: 1.72,
