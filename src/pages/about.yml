@@ -1,0 +1,9 @@
+title: About
+template: main
+url: /about
+
+content_sections:
+  - widget: hero
+  - widget: timeline
+  - widget: brand
+  - widget: footer

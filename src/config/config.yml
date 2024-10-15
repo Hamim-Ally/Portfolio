@@ -1,0 +1,16 @@
+# ===========================
+# Settings
+# ===========================
+lang: en
+charset: UTF-8
+year: 2024
+background: /media/images/bg/0.jpg
+
+
+
+# ===========================
+# Don't Delete this Section
+# ===========================
+pages_path: src/pages
+widgets_path: src/widgets
+templates_path: src/templates

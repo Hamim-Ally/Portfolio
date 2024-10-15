@@ -1,0 +1,9 @@
+title: Contact
+template: main
+url: /contact
+
+content_sections:
+  - widget: hero
+  - widget: contact_form
+  - widget: brand
+  - widget: footer
