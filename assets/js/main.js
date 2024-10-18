@@ -8,6 +8,73 @@ Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=Mille
 p.s. I am available for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
 
 ------------------------------------------- */
+
+// Function to initialize all progress circles with individual values
+function initializeAllProgressBars() {
+  const circles = document.querySelectorAll('.progress-circle');
+
+  if (circles.length === 0) {
+      console.warn("No progress circles found.");
+      return; // Stop if no circles exist
+  }
+
+  circles.forEach((circle) => {
+      // Get the individual value from data attribute (e.g., data-value="0")
+      const value = parseFloat(circle.getAttribute('data-value')) || 0;
+
+      // Create a new ProgressBar.Circle for each element
+      const bar = new ProgressBar.Circle(circle, {
+          strokeWidth: 7,
+          easing: 'easeInOut',
+          duration: 1400,
+          trailWidth: 7,
+          step: function (state, circle) {
+              const percentage = Math.round(circle.value() * 100);
+              // Always show percentage including 0%
+              circle.setText(`${percentage}`);
+          }
+      });
+
+      // Animate the circle to its specific value
+      bar.animate(value / 100);  // Animate to the value (between 0 and 1)
+  });
+}
+
+
+function initializeAllLineProgressBars() {
+  const lines = document.querySelectorAll('.line-progress');
+
+  if (lines.length === 0) {
+      console.warn("No line progress bars found.");
+      return; // Stop if no lines exist
+  }
+
+  lines.forEach((line) => {
+      // Get the individual value from data attribute (e.g., data-value="0.5")
+      const value = parseFloat(line.getAttribute('data-value')) || 0;
+
+      // Create a new ProgressBar.Line for each element
+      const bar = new ProgressBar.Line(line, {
+          strokeWidth: 1.72,
+          easing: 'easeInOut',
+          duration: 1400,
+          delay: 160,
+          trailWidth: 1.72,
+          svgStyle: {
+              width: '100%',
+              height: '100%'
+          },
+          step: (state, bar) => {
+              bar.setText(Math.round(bar.value() * 100) + ' %'); // Show percentage
+          }
+      });
+
+      // Animate the line to its specific value
+      bar.animate(value/100); // Animate to the value (between 0 and 1)
+  });
+}
+
+
 $(function () {
 
   "use strict";
@@ -100,6 +167,9 @@ $(function () {
       });
     }
   });
+
+  initializeAllProgressBars();
+  initializeAllLineProgressBars();
 
   // Contact form
   $('.art-input').keyup(function () {
@@ -338,6 +408,9 @@ $(function () {
       renderByPixel: true,
       continuousScrolling: true,
     });
+
+    initializeAllProgressBars();
+    initializeAllLineProgressBars();
 
     $("#form").submit(function () {
       $.ajax({
