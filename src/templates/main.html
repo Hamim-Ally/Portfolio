@@ -8,12 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- color of address bar in mobile browser -->
         <meta name="theme-color" content="#2B2B35">
-        
+
         <title>{{ title }}</title>
         {% for css_url in css %}
         <link rel="stylesheet" href="{{ css_url }}">{% endfor %}
         {% for js_url in js %}
-        <script src="{{ js_url.path }}"{% if js_url.defer %} defer{% endif %}></script>{% endfor %}
+        <script src="{{ js_url.path }}" {% if js_url.defer %} defer{% endif %}></script>{% endfor %}
     </head>
 
     <body>
@@ -31,7 +31,8 @@
                 <div class="art-app-container">
 
                     <!-- info bar -->
-                    <div id="swup-info-bar" class="art-info-bar" {% if title != "About" %} style="display: none;" {% endif %}>
+                    <div id="swup-info-bar" class="art-info-bar" {% if title != "About" %} style="display: none;"
+                        {% endif %}>
 
                         <!-- menu bar frame -->
                         <div class="art-info-bar-frame">
@@ -99,30 +100,14 @@
                                 <!-- language skills -->
                                 <div class="art-lang-skills p-30-15">
 
-                                    <!-- skill -->
+                                    {% for language in languages %}
                                     <div class="art-lang-skills-item">
-                                        <div id="circleprog1" class="art-cirkle-progress"></div>
+                                        <div class="art-cirkle-progress progress-circle"
+                                            data-value="{{language.value}}"></div>
                                         <!-- title -->
-                                        <h6>French</h6>
+                                        <h6>{{language.name}}</h6>
                                     </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-lang-skills-item">
-                                        <div id="circleprog2" class="art-cirkle-progress"></div>
-                                        <!-- title -->
-                                        <h6>English</h6>
-                                    </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-lang-skills-item">
-                                        <div id="circleprog3" class="art-cirkle-progress"></div>
-                                        <!-- title -->
-                                        <h6>Spanish</h6>
-                                    </div>
-                                    <!-- skill end -->
-
+                                    {% endfor %}
                                 </div>
                                 <!-- language skills end -->
 
@@ -132,80 +117,20 @@
                                 <!-- hard skills -->
                                 <div class="art-hard-skills p-30-15">
 
-                                    <!-- skill -->
+                                    {% for skill in skills %}
                                     <div class="art-hard-skills-item">
                                         <div class="art-skill-heading">
                                             <!-- title -->
-                                            <h6>html</h6>
+                                            <h6>{{skill.name}}</h6>
                                         </div>
                                         <!-- progressbar frame -->
                                         <div class="art-line-progress">
                                             <!-- progressbar -->
-                                            <div id="lineprog1"></div>
+                                            <div class="line-progress" data-value="{{skill.value}}"></div>
                                         </div>
                                         <!-- progressbar frame end -->
                                     </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-hard-skills-item">
-                                        <div class="art-skill-heading">
-                                            <!-- title -->
-                                            <h6>CSS</h6>
-                                        </div>
-                                        <!-- progressbar frame -->
-                                        <div class="art-line-progress">
-                                            <!-- progressbar -->
-                                            <div id="lineprog2"></div>
-                                        </div>
-                                        <!-- progressbar frame end -->
-                                    </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-hard-skills-item">
-                                        <div class="art-skill-heading">
-                                            <!-- title -->
-                                            <h6>Js</h6>
-                                        </div>
-                                        <!-- progressbar frame -->
-                                        <div class="art-line-progress">
-                                            <!-- progressbar -->
-                                            <div id="lineprog3"></div>
-                                        </div>
-                                        <!-- progressbar frame end -->
-                                    </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-hard-skills-item">
-                                        <div class="art-skill-heading">
-                                            <!-- title -->
-                                            <h6>PHP</h6>
-                                        </div>
-                                        <!-- progressbar frame -->
-                                        <div class="art-line-progress">
-                                            <!-- progressbar -->
-                                            <div id="lineprog4"></div>
-                                        </div>
-                                        <!-- progressbar frame end -->
-                                    </div>
-                                    <!-- skill end -->
-
-                                    <!-- skill -->
-                                    <div class="art-hard-skills-item">
-                                        <div class="art-skill-heading">
-                                            <!-- title -->
-                                            <h6>Wordpress</h6>
-                                        </div>
-                                        <!-- progressbar frame -->
-                                        <div class="art-line-progress">
-                                            <!-- progressbar -->
-                                            <div id="lineprog5"></div>
-                                        </div>
-                                        <!-- progressbar frame end -->
-                                    </div>
-                                    <!-- skill end -->
+                                    {% endfor %}
 
                                 </div>
                                 <!-- language skills end -->
@@ -300,7 +225,7 @@
 
                         <!-- menu bar frame -->
                         <div class="art-menu-bar-frame">
-                    
+
                             <!-- menu bar header -->
                             <div class="art-menu-bar-header">
                                 <!-- menu bar button -->
@@ -311,26 +236,29 @@
                                 <!-- menu bar button end -->
                             </div>
                             <!-- menu bar header end -->
-                    
+
                             <!-- current page title -->
                             <div class="art-current-page"></div>
                             <!-- current page title end -->
-                    
+
                             <!-- scroll frame -->
                             <div class="art-scroll-frame">
-                    
+
                                 <!-- menu -->
                                 <nav id="swupMenu">
                                     <!-- menu list -->
                                     <ul class="main-menu">
                                         {% for element in menu %}
-                                        <li class="menu-item {% if element.name == title %} current-menu-item {% endif %}"><a href="{{element.url}}">{{element.name}}</a></li>
+                                        <li
+                                            class="menu-item {% if element.name == title %} current-menu-item {% endif %}">
+                                            <a href="{{element.url}}">{{element.name}}</a>
+                                        </li>
                                         {% endfor %}
                                     </ul>
                                     <!-- menu list end -->
                                 </nav>
                                 <!-- menu end -->
-                    
+
                                 <!-- language change -->
                                 <ul class="art-language-change">
                                     <!-- language item -->
@@ -339,13 +267,13 @@
                                     <li class="art-active-lang"><a href="#.">EN</a></li>
                                 </ul>
                                 <!-- language change end -->
-                    
+
                             </div>
                             <!-- scroll frame end -->
-                    
+
                         </div>
                         <!-- menu bar frame -->
-                    
+
                     </div>
                     <!-- menu bar end -->
 
@@ -368,6 +296,85 @@
             </div>
             <!-- preloader end -->
         </div>
+
+        <script>
+            // Function to initialize all progress circles with individual values
+            function initializeAllProgressBars() {
+                const circles = document.querySelectorAll('.progress-circle');
+
+                if (circles.length === 0) {
+                    console.warn("No progress circles found.");
+                    return; // Stop if no circles exist
+                }
+
+                circles.forEach((circle) => {
+                    // Get the individual value from data attribute (e.g., data-value="0")
+                    const value = parseFloat(circle.getAttribute('data-value')) || 0;
+
+                    // Create a new ProgressBar.Circle for each element
+                    const bar = new ProgressBar.Circle(circle, {
+                        strokeWidth: 7,
+                        easing: 'easeInOut',
+                        duration: 1400,
+                        trailWidth: 7,
+                        step: function (state, circle) {
+                            const percentage = Math.round(circle.value() * 100);
+                            // Always show percentage including 0%
+                            circle.setText(`${percentage}`);
+                        }
+                    });
+
+                    // Animate the circle to its specific value
+                    bar.animate(value / 100);  // Animate to the value (between 0 and 1)
+                });
+            }
+
+            // Initialize on page load
+            initializeAllProgressBars();
+
+            // Re-initialize on Swup content replacement
+            document.addEventListener("swup:contentReplaced", initializeAllProgressBars);
+
+            // Function to initialize all line progress bars with individual values
+            function initializeAllLineProgressBars() {
+                const lines = document.querySelectorAll('.line-progress');
+
+                if (lines.length === 0) {
+                    console.warn("No line progress bars found.");
+                    return; // Stop if no lines exist
+                }
+
+                lines.forEach((line) => {
+                    // Get the individual value from data attribute (e.g., data-value="0.5")
+                    const value = parseFloat(line.getAttribute('data-value')) || 0;
+
+                    // Create a new ProgressBar.Line for each element
+                    const bar = new ProgressBar.Line(line, {
+                        strokeWidth: 1.72,
+                        easing: 'easeInOut',
+                        duration: 1400,
+                        delay: 2800,
+                        trailWidth: 1.72,
+                        svgStyle: {
+                            width: '100%',
+                            height: '100%'
+                        },
+                        step: (state, bar) => {
+                            bar.setText(Math.round(bar.value() * 100) + ' %'); // Show percentage
+                        }
+                    });
+
+                    // Animate the line to its specific value
+                    bar.animate(value/100); // Animate to the value (between 0 and 1)
+                });
+            }
+
+            // Initialize on page load
+            initializeAllLineProgressBars();
+
+            // Re-initialize on Swup content replacement (if applicable)
+            document.addEventListener("swup:contentReplaced", initializeAllLineProgressBars);
+        </script>
     </body>
 
 </html>

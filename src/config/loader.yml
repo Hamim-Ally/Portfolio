@@ -16,7 +16,7 @@ js:
     defer: true
 
   - path: /assets/js/plugins/progressbar.min.js
-    defer: true
+    defer: false
 
   - path: /assets/js/plugins/smooth-scrollbar.min.js
     defer: true

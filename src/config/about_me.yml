@@ -32,3 +32,36 @@ instragram: link
 github: link
 youtube: link
 
+
+
+# ===========================
+# My Skills
+# ===========================
+
+skills:
+  - name: Web Developmet
+    value: 100
+
+  - name: Graphic Design
+    value: 100
+
+  - name: Game Development 
+    value: 100
+
+  - name: Microsoft Office
+    value: 100
+
+
+# ===========================
+# My Skills
+# ===========================
+
+languages:
+  - name: Bangla
+    value: 100
+
+  - name: English
+    value: 60
+  
+  - name: Urdu / Hindi
+    value: 70
