@@ -330,6 +330,15 @@ button
     color: $content-color;
   }
 }
+
+.text-header
+{
+  background: #ffc107;
+  padding: 4px;
+  margin-bottom: 16px;
+  .text{color: #20202a;}
+}
+
 /* ------------------------------
 
 space

@@ -116,7 +116,9 @@
 
                                 <!-- hard skills -->
                                 <div class="art-hard-skills p-30-15">
-
+                                    <div class="text-header">
+                                        <h5 class="text">Skills</h5>
+                                    </div>
                                     {% for skill in skills %}
                                     <div class="art-hard-skills-item">
                                         <div class="art-skill-heading">
@@ -132,22 +134,33 @@
                                     </div>
                                     {% endfor %}
 
+                                    <div class="text-header">
+                                        <h5 class="text">Coding</h5>
+                                    </div>
+                                    {% for code in coding %}
+                                    <div class="art-hard-skills-item">
+                                        <div class="art-skill-heading">
+                                            <!-- title -->
+                                            <h6>{{code.name}}</h6>
+                                        </div>
+                                        <!-- progressbar frame -->
+                                        <div class="art-line-progress">
+                                            <!-- progressbar -->
+                                            <div class="line-progress" data-value="{{code.value}}"></div>
+                                        </div>
+                                        <!-- progressbar frame end -->
+                                    </div>
+                                    {% endfor %}
                                 </div>
-                                <!-- language skills end -->
 
-                                <!-- divider -->
-                                <div class="art-ls-divider"></div>
-
+                                <div class="text-header">
+                                    <h5 class="text">Knowledge</h5>
+                                </div>
                                 <!-- knowledge list -->
                                 <ul class="art-knowledge-list p-15-0">
-                                    <!-- list item -->
-                                    <li>Bootstrap, Materialize</li>
-                                    <!-- list item -->
-                                    <li>Stylus, Sass, Less</li>
-                                    <!-- list item -->
-                                    <li>Gulp, Webpack, Grunt</li>
-                                    <!-- list item -->
-                                    <li>GIT knowledge</li>
+                                    {% for knowledge in knowledges %}
+                                        <li>{{knowledge}}</li>
+                                    {% endfor %}
                                 </ul>
                                 <!-- knowledge list end -->
 
