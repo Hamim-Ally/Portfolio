@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- col -->
+        <div class="col-lg-12">
+
+            <!-- section title -->
+            <div class="art-section-title">
+                <!-- title frame -->
+                <div class="art-title-frame">
+                    <!-- title -->
+                    <h4>My Services</h4>
+                </div>
+                <!-- title frame end -->
+            </div>
+            <!-- section title end -->
+
+        </div>
+        <!-- col end -->
+
+        {% for service in services %}
+        <div class="col-lg-4 col-md-6">
+            <div class="art-a art-service-icon-box">
+                <div class="art-service-ib-content">                    
+                    <div class="row">
+                        <div class="col-lg-5 my-auto">
+                            <div class="icon">{{service.icon}}</div>
+                        </div>
+                        <div class="col-lg-7 my-auto">
+                            <h5 class="mb-15">{{service.name}}</h5>
+                            <div class="mb-15">{{service.details}}</div>
+                            <div class="art-buttons-frame">
+                                <a href="contact.html" class="art-link art-color-link art-w-chevron">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+    <!-- row end -->
+
+</div>

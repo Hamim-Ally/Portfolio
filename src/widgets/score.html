@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row p-30-0">
+        {% for score in scores %}
+        <div class="col-md-3 col-6">
+            <div class="art-counter-frame">
+                <div class="art-counter-box">
+                    <span class="art-counter">{{ score.value }}</span>
+                    {% if score.plus %}<span class="art-counter-plus">+</span>{% endif %}
+                </div>
+                <h6>{{ score.name }}</h6>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

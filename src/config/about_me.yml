@@ -1,0 +1,139 @@
+# ===========================
+# About Me
+# ===========================
+first_name: Hamim
+last_name: Ally
+photo: /media/images/profile/face-1.webp
+Age: 22
+
+
+
+# ===========================
+# Location
+# ===========================
+Residence: Bangladesh
+City: Dhaka
+
+
+
+# ===========================
+# Contact
+# ===========================
+contact: 01789066358
+email: hamimally3105@gmail.com
+
+
+
+# ===========================
+# Social Account
+# ===========================
+facebook: link
+instragram: link
+github: link
+youtube: link
+
+
+
+# ===========================
+# My Education
+# ===========================
+educations:
+  - course_name: DIPLOMA IN COMPUTER ENGINEERING
+    result: 7th Semester - Running
+    year: 2020-Present
+    institute: Daffodil Polytechnic Institute
+
+
+
+# ===========================
+# My Work History
+# ===========================
+work_histories:
+  - name: NutraWin
+    post: IT Specialist
+    year: Jan 2023 - present
+    details:  
+      - Launched Nutrawin's official website with a one-page SEO
+      - Managing the website as a webmaster
+      - Designed all the contents of "Nutra Fest"- a collaborative event with OIS, Mirpur
+      - Regular design curator of the official Facebook page
+  
+  - name: Freelance Graphic Design
+    post: Graphic Designer
+    year: Jan 2020 - present
+    details:  
+      - Created logos, brochures, banners and
+      - promotional materials for various clients.
+      - Designed engaging content for events & social media campaigns.
+      - Collaborated with clients to deliver tailored design solutions.
+      - Skilled in Adobe Illustrator, Photoshop.
+
+  - name: Freelance Website Projects
+    post: Web Developer
+    year: Jan 2022 - present
+    details:  
+      - Built responsive, user-friendly websites.
+      - Applied SEO strategies for visibility.
+      - Managed hosting, domains, and maintenance.
+      - Customized with WordPress, HTML, CSS and JavaScript.
+      - Aligned designs with client branding.
+
+
+
+
+# ===========================
+# My Skills
+# ===========================
+skills:
+  - name: Web Developmet
+    value: 90
+
+  - name: Graphic Design
+    value: 90
+
+  - name: Game Development 
+    value: 60
+
+  - name: Microsoft Office
+    value: 95
+
+coding:
+  - name: Python
+    value: 85
+  
+  - name: JavaScript
+    value: 80
+  
+  - name: PHP
+    value: 80
+  
+  - name: C
+    value: 30
+  
+  - name: HTML
+    value: 95
+
+  - name: CSS
+    value: 90
+
+  - name: SCSS
+    value: 90
+
+knowledges:
+  - WordPress
+  - Nodejs [Electron]
+  - Unity
+  - Photoshop
+  - Illustrator
+  - Camtasia
+  - Shotcut
+
+languages:
+  - name: Bangla
+    value: 100
+
+  - name: English
+    value: 60
+  
+  - name: Urdu / Hindi
+    value: 70

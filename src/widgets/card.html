@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row p-30-0">
+        <div class="col-lg-12">
+            <div class="art-section-title">
+                <div class="art-title-frame">
+                    <h4>{{title}}</h4>
+                </div>
+            </div>
+
+        </div>
+        {% for data in content %}
+            <div class="col-12 col-lg-{{int(12/col_size)}}">
+                <div class="art-a art-card">
+                    <div class="text-header">
+                        <h5 class="text">{{data['title']}}</h5>
+                    </div>
+                    <ul class="art-list">
+                    {% for list in data['list'] %}
+                        <li>{{list}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

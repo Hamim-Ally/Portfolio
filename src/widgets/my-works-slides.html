@@ -1,0 +1,95 @@
+<div class="container-fluid">
+
+    <!-- row -->
+    <div class="row p-30-0 mb-30">
+
+        <!-- col -->
+        <div class="col-lg-12">
+
+            <!-- section title -->
+            <div class="art-section-title">
+                <!-- title frame -->
+                <div class="art-title-frame">
+                    <!-- title -->
+                    <h4>My Works</h4>
+                </div>
+                <!-- title frame end -->
+                <!-- right frame -->
+                <div class="art-right-frame">
+                    <div class="art-project-category"></div>
+                </div>
+                <!-- right frame end -->
+            </div>
+            <!-- section title end -->
+
+        </div>
+        <!-- col end -->
+
+        <!-- col -->
+        <div class="col-lg-12">
+
+            <!-- slider container -->
+            <div class="swiper-container art-works-slider" style="overflow: visible">
+                <!-- slider wrapper -->
+                <div class="swiper-wrapper">
+                    {% for my_works_slide in my_works_slides %}
+                    <div class="swiper-slide">
+                        <!-- item frame -->
+                        <a data-fancybox="gallery" data-no-swup href="{{my_works_slide.img}}"
+                            class="art-a art-portfolio-item-frame art-horizontal">
+                            <!-- img -->
+                            <img src="{{my_works_slide.thumbnail}}" alt="item">
+                            <!-- zoom icon -->
+                            <span class="art-item-hover"><i class="fas fa-expand"></i></span>
+                        </a>
+                        <!-- item end -->
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- slider wrapper end -->
+            </div>
+            <!-- slider container end -->
+
+        </div>
+        <!-- col end -->
+
+        <!-- col -->
+        <div class="col-lg-12">
+
+            <!-- slider navigation -->
+            <div class="art-slider-navigation">
+
+                <!-- left side -->
+                <div class="art-sn-left">
+
+                    <!-- slider pagination -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+                <!-- left side end -->
+
+                <!-- right side -->
+                <div class="art-sn-right">
+
+                    <!-- slider navigation -->
+                    <div class="art-slider-nav-frame">
+                        <!-- prev -->
+                        <div class="art-slider-nav art-works-swiper-prev"><i class="fas fa-chevron-left"></i></div>
+                        <!-- next -->
+                        <div class="art-slider-nav art-works-swiper-next"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                    <!-- slider navigation -->
+
+                </div>
+                <!-- right side end -->
+
+            </div>
+            <!-- slider navigation end -->
+
+        </div>
+        <!-- col end -->
+
+    </div>
+    <!-- row end -->
+
+</div>

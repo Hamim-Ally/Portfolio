@@ -1,0 +1,42 @@
+title: About
+template: main
+url: /about
+
+
+
+content_sections:
+  - widget: hero
+
+  - widget: card
+    data:
+        title: Knowledge
+        col_size: 4
+        content: 
+
+        - title: Web Development
+          list:
+          - Static Site 
+          - WordPress
+          - Nodejs [Electron]
+          
+        - title: Game Development
+          list:
+          - Unity Engine
+          - Web Based Game
+          - Mugen Engine
+
+        - title: Graphic Design
+          list:
+          - Photoshop
+          - Illustrator
+          - Inkscape
+
+        - title: Video Editing 
+          list:
+          - Camtasia
+          - Shotcut
+          - Capcut
+
+  - widget: timeline
+  - widget: brand
+  - widget: footer
