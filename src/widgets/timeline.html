@@ -11,47 +11,6 @@
                 <!-- title frame -->
                 <div class="art-title-frame">
                     <!-- title -->
-                    <h4>Education</h4>
-                </div>
-                <!-- title frame end -->
-            </div>
-            <!-- section title end -->
-
-            <div class="art-timeline art-gallery">
-
-                {% for education in educations %}
-                <div class="art-timeline-item">
-                    <div class="art-timeline-mark-light"></div>
-                    <div class="art-timeline-mark"></div>
-
-                    <div class="art-a art-timeline-content">
-                        <div class="art-card-header">
-                            <div class="art-left-side">
-                                <h5>{{education.course_name}}</h5>
-                                <div class="art-el-suptitle mb-15">{{education.result}}</div>
-                            </div>
-                            <div class="art-right-side">
-                                <span class="art-date">{{education.year}}</span>
-                            </div>
-                        </div>
-
-                        <p>{{education.institute}}</p>
-                        <!-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                            class="art-link art-color-link art-w-chevron">Diplome</a> -->
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <!-- timeline end -->
-
-        </div>
-        <div class="col-lg-6">
-
-            <!-- section title -->
-            <div class="art-section-title">
-                <!-- title frame -->
-                <div class="art-title-frame">
-                    <!-- title -->
                     <h4>Work History</h4>
                 </div>
                 <!-- title frame end -->
@@ -81,6 +40,47 @@
                             <li>{{ data }}</li>
                         </div>
                         {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- timeline end -->
+
+        </div>
+        <div class="col-lg-6">
+
+            <!-- section title -->
+            <div class="art-section-title">
+                <!-- title frame -->
+                <div class="art-title-frame">
+                    <!-- title -->
+                    <h4>Education</h4>
+                </div>
+                <!-- title frame end -->
+            </div>
+            <!-- section title end -->
+
+            <div class="art-timeline art-gallery">
+
+                {% for education in educations %}
+                <div class="art-timeline-item">
+                    <div class="art-timeline-mark-light"></div>
+                    <div class="art-timeline-mark"></div>
+
+                    <div class="art-a art-timeline-content">
+                        <div class="art-card-header">
+                            <div class="art-left-side">
+                                <h5>{{education.course_name}}</h5>
+                                <div class="art-el-suptitle mb-15">{{education.result}}</div>
+                            </div>
+                            <div class="art-right-side">
+                                <span class="art-date">{{education.year}}</span>
+                            </div>
+                        </div>
+
+                        <p>{{education.institute}}</p>
+                        <!-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
+                            class="art-link art-color-link art-w-chevron">Diplome</a> -->
                     </div>
                 </div>
                 {% endfor %}

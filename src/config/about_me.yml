@@ -43,6 +43,11 @@ educations:
     year: 2020-Present
     institute: Daffodil Polytechnic Institute
 
+
+
+# ===========================
+# My Work History
+# ===========================
 work_histories:
   - name: NutraWin
     post: IT Specialist
@@ -73,10 +78,12 @@ work_histories:
       - Customized with WordPress, HTML, CSS and JavaScript.
       - Aligned designs with client branding.
 
+
+
+
 # ===========================
 # My Skills
 # ===========================
-
 skills:
   - name: Web Developmet
     value: 90

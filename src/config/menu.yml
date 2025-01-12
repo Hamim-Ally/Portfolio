@@ -5,5 +5,11 @@ menu:
   - name: About
     url: /about/
 
+  - name: Projects
+    url: /projects
+
+  # - name: Blog
+  #   url: /404
+    
   - name: Contact
     url: /contact/

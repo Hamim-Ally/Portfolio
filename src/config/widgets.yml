@@ -1,5 +1,5 @@
 # Hero
-hero_title: Discover my Amazing <br>Art Space!s
+hero_title: Discover my Amazing <br>Art Space!
 hero_text_writer:
   - web interfaces.
   - ios and android applications.
@@ -7,6 +7,9 @@ hero_text_writer:
   - automation tools.
 hero_background: /media/images/bg/0.jpg
 hero_avatar: /media/images/profile/face-2.webp
+
+# About Me Hero
+
 
 # Score
 scores:
@@ -24,7 +27,7 @@ scores:
   
   - name: Honors and Awards
     value: 0
-    plus: true
+    plus: false
 
 # Service
 services:

@@ -1,5 +1,6 @@
 import os
 import yaml
+import markdown
 
 # Merge two dictionaries, with dict2 overwriting dict1.
 def merge_dicts(dict1, dict2):
@@ -43,6 +44,7 @@ def load_pages(directory='src/pages'):
     except FileNotFoundError:
         print(f"Directory '{directory}' not found.")
         return []
+    
 
 # ====================================
 # Initialization Functions

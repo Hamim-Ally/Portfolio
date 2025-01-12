@@ -3,7 +3,7 @@
 # ===========================
 lang: en
 charset: UTF-8
-year: 2024
+year: 2025
 background: /media/images/bg/0.jpg
 
 
@@ -11,6 +11,10 @@ background: /media/images/bg/0.jpg
 # ===========================
 # Don't Delete this Section
 # ===========================
-pages_path: src/pages
-widgets_path: src/widgets
 templates_path: src/templates
+widgets_path: src/widgets
+pages_path:
+  - src/pages
+  - src/projects
+
+

@@ -3,7 +3,12 @@ template: main
 url: /contact
 
 content_sections:
-  - widget: hero
+  - widget: banner
+    data: 
+      title: Contact Me
+      subtitle: Let's work together!
+      background_image: /media/images/bg/0.jpg
+
   - widget: contact_form
   - widget: brand
   - widget: footer
