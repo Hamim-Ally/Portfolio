@@ -80,7 +80,7 @@ $(function () {
   "use strict";
 
   const options = {
-    containers: ["#swup", "#swupMenu", "#swup-info-bar"],
+    containers: ["#swup", "#swupMenu"],
     animateHistoryBrowsing: true,
     linkSelector: 'a:not([data-no-swup])'
   };
@@ -93,11 +93,11 @@ $(function () {
     renderByPixel: true,
     continuousScrolling: true,
   });
-  Scrollbar.init(document.querySelector('#scrollbar2'), {
-    damping: 0.05,
-    renderByPixel: true,
-    continuousScrolling: true,
-  });
+  // Scrollbar.init(document.querySelector('#scrollbar2'), {
+  //   damping: 0.05,
+  //   renderByPixel: true,
+  //   continuousScrolling: true,
+  // });
 
   // page loading
   $(document).ready(function () {
@@ -403,11 +403,11 @@ $(function () {
       renderByPixel: true,
       continuousScrolling: true,
     });
-    Scrollbar.init(document.querySelector('#scrollbar2'), {
-      damping: 0.05,
-      renderByPixel: true,
-      continuousScrolling: true,
-    });
+    // Scrollbar.init(document.querySelector('#scrollbar2'), {
+    //   damping: 0.05,
+    //   renderByPixel: true,
+    //   continuousScrolling: true,
+    // });
 
     initializeAllProgressBars();
     initializeAllLineProgressBars();
