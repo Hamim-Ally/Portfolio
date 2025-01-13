@@ -1,12 +1,15 @@
 title: About
-template: main
+template: about
 url: /about
 
-
+hero_title: About Me
+description: "Hello. I'm Hamim Ally (Formerly known as Ali Mubashshir)<br>
+              I'm a full-time FreeLancer and occasional content creator.<br>
+              This is my personal site and work gallery."
+hero_background: /media/images/bg/0.jpg
+hero_avatar: /media/images/profile/face-2.webp
 
 content_sections:
-  - widget: hero
-
   - widget: card
     data:
         title: Knowledge
@@ -15,15 +18,21 @@ content_sections:
 
         - title: Web Development
           list:
-          - Static Site 
+          - Static Site
           - WordPress
-          - Nodejs [Electron]
-          
+          - PHP Site
+
         - title: Game Development
           list:
           - Unity Engine
           - Web Based Game
           - Mugen Engine
+
+        - title: Office Application
+          list:
+          - Word
+          - Powerpoint
+          - Excel
 
         - title: Graphic Design
           list:
@@ -31,11 +40,32 @@ content_sections:
           - Illustrator
           - Inkscape
 
-        - title: Video Editing 
+  - widget: card
+    data:
+        title: Coding
+        col_size: 3
+        content: 
+
+        - title: Scripting Language
           list:
-          - Camtasia
-          - Shotcut
-          - Capcut
+          - JavaScript 
+          - Python
+          - PHP
+          - C Sharp [Only for Unity Game Engine]
+                  
+        - title: Framwork or Library
+          list:
+          - Bootstrap
+          - jQurery
+          - Electron [Node JS]
+          - PyQt 5
+          
+        - title: Other Languages
+          list:
+          - "Markup: HTML, Markdown"
+          - "Style Sheet: CSS, SCSS"
+          - "Configuration: JSON, YAML"
+          - "Query: SQL"
 
   - widget: timeline
   - widget: brand

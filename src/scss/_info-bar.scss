@@ -7,10 +7,6 @@ info bar
 
 /* ----- header ----- */
 .art-header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 99999;
   width: 100%;
   padding: 30px;
   height: 235px;
@@ -301,12 +297,8 @@ info bar
   padding: 0 35px;
   height: 50px;
   background: $info-bar-2-color-light;
-  position: absolute;
-  bottom: 0;
   box-shadow: $shadow-2;
-  left: 0;
   width: 100%;
-  z-index: 999;
 
   & a {
     color: $text-color-2;
